@@ -1,6 +1,6 @@
 # to-raw-sql
 
-## Tambahkan kode ini ke app/providers/AppServicesProvider tambahkan di funtion boo()
+## Tambahkan kode ini ke app/providers/AppServicesProvider tambahkan di funtion boot()
          \Illuminate\Database\Query\Builder::macro('toRawSql', function(){
             return array_reduce($this->getBindings(), function($sql, $binding){
                 return preg_replace('/\?/', is_numeric($binding) ? $binding : "'".$binding."'" , $sql, 1);
