@@ -10,3 +10,6 @@
         \Illuminate\Database\Eloquent\Builder::macro('toRawSql', function(){
             return ($this->getQuery()->toRawSql());
         });
+
+## cara penggunanaannya tinggal pakai toRawSql()
+User::all()->toRawSql();
